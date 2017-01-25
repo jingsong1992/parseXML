@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<func desc="Apply for IMLC" funcType="PM" id="F05030701009" item="New1" module="IMLC" moduleDesc="Import Letters of Credit" product="P08071500000">Apply for IMLC</func>
+    <func desc="Apply for Amendment" funcType="PM" id="F05030700940" item="AmdInstr" module="IMLC" moduleDesc="Import Letters of Credit" product="P08071500000">Apply for Amendment</func>
+</root>
