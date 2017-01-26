@@ -26,9 +26,8 @@ public class GetNameServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String funcName = request.getParameter("funcName");
-		System.out.print(funcName);
 		try {
-			ParseFunRootXML.getFuncIdByName(funcName);
+			ParseFunRootXML.getFuncIdByName(funcName);		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

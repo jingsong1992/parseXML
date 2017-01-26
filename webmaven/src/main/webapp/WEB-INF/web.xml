@@ -784,4 +784,14 @@ standard deployment descriptor.
     <servlet-name>GetNameServlet</servlet-name>
     <url-pattern>/GetNameServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <javaee:description></javaee:description>
+    <javaee:display-name>GetJasonDate</javaee:display-name>
+    <servlet-name>GetJasonDate</servlet-name>
+    <servlet-class>com.main.servlet.GetJasonDate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetJasonDate</servlet-name>
+    <url-pattern>/GetJasonDate</url-pattern>
+  </servlet-mapping>
 </web-app>

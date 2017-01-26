@@ -2,7 +2,6 @@ package com.main.parse;
 
 
 import java.util.List;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -57,16 +56,19 @@ public class ParseFattrXML {
 			String o2mrule = XMLManager.getChildValue(aParent, "O2MRULE");
 			component.setO2mrule(o2mrule);
 			funcattr.addComponent(component);
+			
 		}
 		return funcattr;
 	}
-	public static void test(String funcId) throws Exception, Exception, Exception{
+	public static void test(String funcId) throws Exception{
 		Funcattr funAttr = getFuncattrInfo(funcId);
 		List<Component> componentList = funAttr.getList();
 		for(int i=0;i<componentList.size();i++){
 			System.out.println(componentList.get(i).getName());
+			String table = componentList.get(i).getTable_name();
 			ClassNames dofun = (ClassNames) Class.forName("com.main.getclass."+componentList.get(i).getName()).newInstance();
 			dofun.say();
+			dofun.getDate(table);
 		}
 	}
     
