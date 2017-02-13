@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
 <%@ page import="com.main.bean.FuncPro" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -11,16 +12,17 @@
    String product = null;
 %>
 <% 
-ArrayList<FuncPro> list = (ArrayList)(request.getAttribute("value"));
-for(int i =0;i<list.size();i++){
-	function = (String)(list.get(i).getFunction());
-	product = (String)(list.get(i).getProduct());
-}
+String date = request.getAttribute("value").toString();
+String[] a = date.split("]");
+
 %>
 </head>
 <body>
 	<form action="GetNameServlet">
-		<input type="submit" name="funcName" value="<%=function%>" >
+	<%for(int i=0;i<a.length;i++){
+		%><input type="submit" name="funcName" value="<%=a[i]%>"/><% 
+	} %>
+	
 	</form>
 </body>
 </html>

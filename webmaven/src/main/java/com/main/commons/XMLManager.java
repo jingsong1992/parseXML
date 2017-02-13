@@ -58,7 +58,14 @@ public class XMLManager {
 		}
 		return null;	
 	}
-	
+	public static String getNodeValue(Element element) {
+		if (element==null) return null;
+		if (element.getNodeType()==Element.ELEMENT_NODE)
+		{
+			return element.getNodeValue();
+		}
+		return null;
+	}
 	public static String getNodeAttribute(Element element,String strNodeAttributeName)
 	{
 		if (element==null) return null;
